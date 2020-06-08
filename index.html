@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Clock</title>
+</head>
+<script src="brython.js"></script>
+<script src="brython_stdlib.js"></script>
+
+<body onload="brython()">
+    <div id="center">
+        <h1 id='time'></h1>
+    </div>
+</body>
+
+</html>
+
+<script type="text/python">
+from browser import document
+from browser import timer
+import datetime
+import time
+
+
+
+
+def getTime():
+    time = str(datetime.datetime.now())
+
+    time = time.split()
+    time = time[1]
+    time = " ".join(time)
+    time = time.split()
+    time = "".join(time[0:5])
+    return time
+
+document.getElementById("time").innerHTML=getTime()
+
+
+</script>
+
+<script>
+    i = Math.floor(Math.random() * 57)
+    document.getElementById("center").style.backgroundImage = "url(" + i + ")";
+
+    function reload() {
+        location.reload()
+        i = i + 1
+
+    }
+
+    setTimeout(reload, 50000)
+
+
+
+
+
+
+</script>

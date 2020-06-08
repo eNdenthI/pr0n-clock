@@ -1,0 +1,21 @@
+#center {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#clock {
+    border-style: groove;
+    padding: 100px 250px 100px 250px
+
+}
+
+#time {
+    color: black;
+}
